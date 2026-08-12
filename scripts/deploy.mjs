@@ -95,11 +95,24 @@ step(1, "Preparing local git");
 if (!existsSync(join(root, ".git"))) sh("git init -b main");
 try {
   accessSync(join(root, ".git"));
+  let hasIdentity = false;
+  try {
+    hasIdentity = Boolean(sh("git config user.email").trim());
+  } catch {}
+  if (!hasIdentity) {
+    sh('git config user.email "deploy@localhost"');
+    sh('git config user.name "Deploy Bot"');
+  }
   sh("git add -A");
   try {
     sh('git commit -m "chore: initial commit from starter" --no-verify');
-  } catch {
-    console.log(`    ${c.dim("nothing to commit / already committed")}`);
+  } catch (e) {
+    const msg = String(e.stderr || e.message || "");
+    if (/nothing to commit/i.test(msg)) {
+      console.log(`    ${c.dim("nothing to commit / already committed")}`);
+    } else {
+      die(`git commit failed: ${msg.trim().split("\n")[0]}`);
+    }
   }
 } catch {}
 
