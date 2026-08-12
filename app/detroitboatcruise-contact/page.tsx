@@ -29,7 +29,7 @@ export default function ContactPage() {
           imageAlt="Guests enjoying a cruise aboard the Sycorax"
         />
 
-        <section className="container-px mx-auto max-w-5xl pb-24">
+        <section className="container-px mx-auto max-w-5xl pt-20 pb-24">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
             <Reveal className="space-y-5">
               <p className="text-pretty text-muted-foreground">

@@ -25,7 +25,7 @@ export default function ReviewsPage() {
           imageAlt="Friends celebrating aboard the Sycorax with the Detroit skyline behind them"
         />
 
-        <section className="container-px mx-auto max-w-6xl pb-16">
+        <section className="container-px mx-auto max-w-6xl pt-20 pb-16">
           <RevealGroup className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {reviews.map((r) => (
               <RevealItem

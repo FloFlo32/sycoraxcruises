@@ -24,7 +24,7 @@ export default function BlogPage() {
           imageAlt="Sailboat regatta on the Detroit River at golden hour"
         />
 
-        <section className="container-px mx-auto max-w-5xl pb-24">
+        <section className="container-px mx-auto max-w-5xl pt-20 pb-24">
           <RevealGroup className="grid gap-6 sm:grid-cols-2">
             {blogPosts.map((p) => (
               <RevealItem

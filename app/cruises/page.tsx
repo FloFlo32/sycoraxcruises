@@ -29,7 +29,7 @@ export default function CruisesPage() {
           imageAlt="Guests aboard the Sycorax cruising past the Detroit skyline"
         />
 
-        <section className="container-px mx-auto max-w-6xl pb-24">
+        <section className="container-px mx-auto max-w-6xl pt-20 pb-24">
           <RevealGroup className="grid gap-6 md:grid-cols-3">
             {packages.map((p, i) => (
               <RevealItem

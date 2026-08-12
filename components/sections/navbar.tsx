@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,8 @@ const links = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isCruisesActive = pathname?.startsWith("/cruises") ?? false;
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [cruisesOpen, setCruisesOpen] = React.useState(false);
@@ -71,7 +74,13 @@ export function Navbar() {
               type="button"
               onClick={() => setCruisesOpen((o) => !o)}
               aria-expanded={cruisesOpen}
-              className="inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-accent hover:text-foreground"
+              aria-current={isCruisesActive ? "page" : undefined}
+              className={cn(
+                "inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                isCruisesActive
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/70 hover:bg-accent hover:text-foreground"
+              )}
             >
               Cruises
               <ChevronDown className={cn("size-3.5 transition-transform", cruisesOpen && "rotate-180")} />
@@ -109,15 +118,24 @@ export function Navbar() {
             )}
           </div>
 
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-accent hover:text-foreground"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) => {
+            const active = pathname === l.href;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                  active
+                    ? "bg-primary/10 text-primary"
+                    : "text-foreground/70 hover:bg-accent hover:text-foreground"
+                )}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="flex items-center gap-2">
@@ -144,7 +162,13 @@ export function Navbar() {
               type="button"
               onClick={() => setMobileCruisesOpen((o) => !o)}
               aria-expanded={mobileCruisesOpen}
-              className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-accent hover:text-foreground"
+              aria-current={isCruisesActive ? "page" : undefined}
+              className={cn(
+                "flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                isCruisesActive
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/80 hover:bg-accent hover:text-foreground"
+              )}
             >
               Cruises
               <ChevronDown
@@ -173,16 +197,25 @@ export function Navbar() {
               </div>
             )}
 
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-accent hover:text-foreground"
-              >
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) => {
+              const active = pathname === l.href;
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                    active
+                      ? "bg-primary/10 text-primary"
+                      : "text-foreground/80 hover:bg-accent hover:text-foreground"
+                  )}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
             <Button asChild className="mt-2 rounded-full">
               <Link href="/boat-rental-book-online" onClick={() => setOpen(false)}>
                 book our boat today

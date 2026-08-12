@@ -52,7 +52,7 @@ export default async function CruisePage({
           imageAlt={cruise.alt}
         />
 
-        <section className="container-px mx-auto max-w-5xl pb-16">
+        <section className="container-px mx-auto max-w-5xl pt-20 pb-16">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
             <Reveal>
               <p className="text-pretty text-lg leading-relaxed text-muted-foreground">

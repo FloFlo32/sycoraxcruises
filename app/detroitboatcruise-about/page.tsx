@@ -27,7 +27,7 @@ export default function AboutPage() {
           imageAlt="Vintage-framed view of the Detroit skyline from the water"
         />
 
-        <section className="container-px mx-auto max-w-4xl py-4">
+        <section className="container-px mx-auto max-w-4xl pt-20 pb-4">
           <Reveal>
             <span className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-primary">
               A Smarter Approach to Power Boating

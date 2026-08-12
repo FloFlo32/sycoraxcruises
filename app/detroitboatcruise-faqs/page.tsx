@@ -56,7 +56,7 @@ export default function FaqsPage() {
           imageAlt="Guests at the helm of the Sycorax near the Ambassador Bridge"
         />
 
-        <section className="container-px mx-auto max-w-3xl pb-16">
+        <section className="container-px mx-auto max-w-3xl pt-20 pb-16">
           <Reveal>
             <Accordion items={items} />
           </Reveal>

@@ -1,13 +1,12 @@
 import Image from "next/image";
-import { GridPattern } from "@/components/magic/grid-pattern";
-import { AuroraBackground } from "@/components/magic/aurora-background";
+import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/magic/reveal";
 import { cn } from "@/lib/utils";
 
 /**
- * PageHero — the consistent hero treatment used on every inner page.
- * Real photo in its own rounded card below the copy, never a dark scrim overlay.
- * The image is this page's one `priority` next/image (see CLAUDE.md image rules).
+ * PageHero — full-bleed real photo + gradient overlay + centered white text.
+ * The same treatment as the homepage hero, just shorter, so every inner page
+ * opens with a real, unique, photographic moment instead of a flat panel.
  */
 export function PageHero({
   eyebrow,
@@ -27,46 +26,44 @@ export function PageHero({
   className?: string;
 }) {
   return (
-    <section className={cn("relative overflow-hidden", className)}>
-      <AuroraBackground className="opacity-70" />
-      <GridPattern />
-      <div className="container-px mx-auto max-w-6xl pt-16 pb-4 text-center sm:pt-24">
+    <section
+      className={cn(
+        "relative flex min-h-[58vh] items-center overflow-hidden bg-foreground",
+        className
+      )}
+    >
+      {image && (
+        <Image
+          src={image}
+          alt={imageAlt ?? title}
+          fill
+          priority
+          quality={78}
+          sizes="100vw"
+          className={cn("object-cover", imagePos)}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/75" />
+
+      <div className="container-px relative z-10 mx-auto max-w-2xl py-20 text-center text-white">
         <Reveal>
-          <span className="font-mono text-xs font-medium uppercase tracking-[0.22em] text-primary">
+          <Badge variant="accent" className="mx-auto border-white/25 bg-white/10 text-white">
             {eyebrow}
-          </span>
+          </Badge>
         </Reveal>
         <Reveal delay={0.06}>
-          <h1 className="mx-auto mt-4 max-w-3xl text-balance text-4xl font-bold leading-[1.08] sm:text-5xl md:text-6xl">
+          <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
             {title}
           </h1>
         </Reveal>
         {subtitle && (
           <Reveal delay={0.12}>
-            <p className="mx-auto mt-5 max-w-2xl text-pretty text-lg text-muted-foreground">
+            <p className="mx-auto mt-6 max-w-lg text-pretty text-lg text-white/85">
               {subtitle}
             </p>
           </Reveal>
         )}
       </div>
-
-      {image && (
-        <Reveal delay={0.18}>
-          <div className="container-px mx-auto max-w-5xl pb-20">
-            <div className="relative aspect-[16/8] overflow-hidden rounded-3xl border border-border shadow-xl shadow-primary/5">
-              <Image
-                src={image}
-                alt={imageAlt ?? title}
-                fill
-                priority
-                quality={75}
-                sizes="(max-width: 1024px) 100vw, 1024px"
-                className={cn("object-cover", imagePos)}
-              />
-            </div>
-          </div>
-        </Reveal>
-      )}
     </section>
   );
 }

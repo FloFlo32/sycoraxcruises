@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
+import { TrustStats } from "@/components/sections/trust-stats";
 import { Electric } from "@/components/sections/electric";
 import { Approach } from "@/components/sections/approach";
 import { Packages } from "@/components/sections/packages";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <TrustStats />
         <Electric />
         <Approach />
         <Packages />

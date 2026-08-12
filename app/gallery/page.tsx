@@ -26,7 +26,7 @@ export default function GalleryPage() {
           imageAlt="Guests aboard the Sycorax cruising the Detroit riverfront"
         />
 
-        <section className="container-px mx-auto max-w-6xl pb-24">
+        <section className="container-px mx-auto max-w-6xl pt-20 pb-24">
           <Reveal>
             <Gallery images={galleryImages} />
           </Reveal>
