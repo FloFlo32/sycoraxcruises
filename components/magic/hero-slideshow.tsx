@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import { useReducedMotion } from "motion/react";
+import { cn } from "@/lib/utils";
 
-export type SlideshowImage = { src: string; alt: string };
+export type SlideshowImage = { src: string; alt: string; pos?: string };
 
 /**
  * HeroSlideshow — full-bleed crossfading background images for a hero section.
@@ -33,7 +34,10 @@ export function HeroSlideshow({
           key={img.src}
           src={img.src}
           alt=""
-          className="absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out"
+          className={cn(
+            "absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out",
+            img.pos
+          )}
           style={{ opacity: i === index ? 1 : 0 }}
         />
       ))}

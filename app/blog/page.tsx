@@ -4,6 +4,7 @@ import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
 import { RevealGroup, RevealItem } from "@/components/magic/reveal";
+import { cn } from "@/lib/utils";
 import { blogPosts, img } from "@/content/site-data";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function BlogPage() {
                     alt={p.alt}
                     loading="lazy"
                     decoding="async"
-                    className="size-full object-cover"
+                    className={cn("size-full object-cover", p.pos)}
                   />
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-6">

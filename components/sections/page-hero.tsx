@@ -15,6 +15,7 @@ export function PageHero({
   subtitle,
   image,
   imageAlt,
+  imagePos,
   className,
 }: {
   eyebrow: string;
@@ -22,6 +23,7 @@ export function PageHero({
   subtitle?: string;
   image?: string;
   imageAlt?: string;
+  imagePos?: string;
   className?: string;
 }) {
   return (
@@ -59,7 +61,7 @@ export function PageHero({
                 priority
                 quality={75}
                 sizes="(max-width: 1024px) 100vw, 1024px"
-                className="object-cover"
+                className={cn("object-cover", imagePos)}
               />
             </div>
           </div>

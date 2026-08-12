@@ -2,6 +2,7 @@ import { ArrowUpRight, Clock, Users } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { BorderBeam } from "@/components/magic/border-beam";
 import { BookButton } from "@/components/ui/book-button";
+import { cn } from "@/lib/utils";
 import { packages } from "@/content/site-data";
 
 export function Packages() {
@@ -33,7 +34,10 @@ export function Packages() {
                 alt={p.alt}
                 loading="lazy"
                 decoding="async"
-                className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className={cn(
+                  "size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]",
+                  p.pos
+                )}
               />
             </div>
             <div className="flex flex-1 flex-col gap-3 p-6">

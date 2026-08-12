@@ -5,7 +5,7 @@ import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
-import { reviews, img } from "@/content/site-data";
+import { reviews, img, imgPos } from "@/content/site-data";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -21,6 +21,7 @@ export default function ReviewsPage() {
           eyebrow="Reviews"
           title="See why our electric boat rentals stand out from the crowd in Detroit's cruise scene"
           image={img(30)}
+          imagePos={imgPos(30)}
           imageAlt="Friends celebrating aboard the Sycorax with the Detroit skyline behind them"
         />
 

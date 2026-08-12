@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { Map } from "@/components/sections/map";
 import { InstagramIcon, FacebookIcon } from "@/components/icons";
 import { Reveal } from "@/components/magic/reveal";
-import { img } from "@/content/site-data";
+import { img, imgPos } from "@/content/site-data";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -25,6 +25,7 @@ export default function ContactPage() {
           title="Questions about our Detroit boat rentals? Get in touch."
           subtitle="Contact us."
           image={img(32)}
+          imagePos={imgPos(32)}
           imageAlt="Guests enjoying a cruise aboard the Sycorax"
         />
 

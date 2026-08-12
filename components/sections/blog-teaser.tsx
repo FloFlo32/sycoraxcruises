@@ -29,6 +29,7 @@ export function BlogTeaser() {
               alt={p.alt}
               title={p.homeTeaser}
               ratio="aspect-[4/3]"
+              imagePos={p.pos}
             />
           </RevealItem>
         ))}

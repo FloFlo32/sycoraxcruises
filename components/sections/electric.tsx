@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { BatteryCharging, Volume2, Wind } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
-import { img } from "@/content/site-data";
+import { cn } from "@/lib/utils";
+import { img, imgPos } from "@/content/site-data";
 
 const points = [
   {
@@ -34,7 +35,7 @@ export function Electric() {
               height={700}
               quality={78}
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="aspect-[4/3] w-full object-cover"
+              className={cn("aspect-[4/3] w-full object-cover", imgPos(26))}
             />
           </div>
         </Reveal>

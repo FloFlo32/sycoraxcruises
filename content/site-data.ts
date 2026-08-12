@@ -5,8 +5,36 @@
 
 const img = (n: number) => `/ingested/sycoraxcruises/img-${String(n).padStart(3, "0")}.webp`;
 
+/**
+ * Tailwind object-position class per source photo, tuned by hand so faces
+ * never get cropped when object-cover fits these photos into card/hero
+ * aspect ratios. Default (object-center) is fine for landscapes without a
+ * face near the top edge; portrait/selfie-style shots need a bias upward.
+ */
+const FACE_POS: Record<number, string> = {
+  14: "object-[center_58%]",
+  26: "object-[center_58%]",
+  38: "object-[center_20%]",
+  54: "object-[center_65%]",
+  33: "object-[center_20%]",
+  53: "object-[center_30%]",
+  35: "object-[center_30%]",
+  45: "object-[center_30%]",
+  34: "object-[center_20%]",
+  50: "object-[center_35%]",
+  36: "object-[center_35%]",
+  13: "object-[center_12%]",
+  12: "object-[center_25%]",
+  3: "object-[center_20%]",
+  32: "object-[center_30%]",
+  30: "object-[center_30%]",
+  40: "object-[center_45%]",
+};
+export const imgPos = (n: number) => FACE_POS[n] ?? "object-center";
+
 export const packages = [
   {
+    slug: "belle-isle-breeze",
     name: "Belle Isle Breeze",
     activityId: "0574ca5d-536d-49fb-b999-a6cefb8b3fb5",
     duration: "75 minutes",
@@ -14,10 +42,25 @@ export const packages = [
     price: "$275 day / $350 evening",
     description:
       "A 75-minute cruise around Belle Isle, America's most popular urban park.",
+    longDescription:
+      "A 75-minute cruise navigating around Belle Isle, America's most popular urban park. On this cruise, passengers get a clear, beautiful view of the Detroit skyline from about a mile away, all aboard the fully electric Sycorax.",
+    highlights: [
+      "75 minutes around Belle Isle",
+      "Clear skyline views from about a mile away",
+      "$275 during the day, $350 for evening sunset cruises",
+      "Up to 6 guests, captain and first mate included",
+    ],
     image: img(38),
+    pos: imgPos(38),
     alt: "Guest standing at the bow of the Sycorax with arms outstretched near Belle Isle",
+    gallery: [
+      { n: 38, alt: "Guest standing at the bow of the Sycorax near Belle Isle" },
+      { n: 2, alt: "Sailboat regatta on the Detroit River at golden hour" },
+      { n: 20, alt: "Sunset over open water on the Detroit River" },
+    ],
   },
   {
+    slug: "city-sights-river-cruise",
     name: "City Sights River Cruise",
     activityId: "02d1fc06-d54e-443c-9206-29ae86b618a6",
     duration: "2 hours",
@@ -25,10 +68,25 @@ export const packages = [
     price: "$450",
     description:
       "Relax in luxury while we breeze along the number one riverwalk in the U.S., capturing unique vantage points of the mighty cities of Detroit and Windsor, from Belle Isle to the Ambassador Bridge.",
+    longDescription:
+      "A two-hour breeze along the Detroit Riverwalk with unique, up-close perspectives of the downtown Detroit and Windsor cityscapes, stretching from Belle Isle to the Ambassador Bridge. Relax in luxury while our crew navigates the number one riverwalk in the U.S.",
+    highlights: [
+      "2-hour cruise, Belle Isle to the Ambassador Bridge",
+      "Up-close views of downtown Detroit and Windsor",
+      "$450 flat, 100% inclusive",
+      "Up to 6 guests, captain and first mate included",
+    ],
     image: img(54),
+    pos: imgPos(54),
     alt: "Group of six friends on the Sycorax with the Detroit skyline behind them",
+    gallery: [
+      { n: 54, alt: "Group of six friends on the Sycorax with the Detroit skyline behind them" },
+      { n: 28, alt: "Ambassador Bridge at sunset over the Detroit River" },
+      { n: 27, alt: "Detroit skyline at sunset from the water" },
+    ],
   },
   {
+    slug: "hidden-cove-haven",
     name: "Hidden Cove Haven",
     activityId: "eb43c004-d97e-48b7-b9f0-ee5029d5caf7",
     duration: "4 hours",
@@ -36,8 +94,22 @@ export const packages = [
     price: "$800",
     description:
       "Includes a gourmet charcuterie board. Luxuriate in peace and solitude as we quietly cruise the Detroit River either to the lush and idyllic Ford Cove outside the Michelin-rated Edsel and Eleanor Ford House, or to the industrial yet tranquil McNichols Cove downriver from Detroit.",
+    longDescription:
+      "A four-hour luxury cruise traveling to either the lush Ford Cove, near the Michelin-rated Edsel and Eleanor Ford House, or the industrial yet tranquil McNichols Cove downriver from Detroit. Includes a gourmet charcuterie board for the ultimate in peace and solitude on the water.",
+    highlights: [
+      "4-hour cruise to Ford Cove or McNichols Cove",
+      "Gourmet charcuterie board included",
+      "$800 flat, 100% inclusive",
+      "Up to 6 guests, captain and first mate included",
+    ],
     image: img(33),
+    pos: imgPos(33),
     alt: "Crew member serving a charcuterie board and wine dockside",
+    gallery: [
+      { n: 33, alt: "Crew member serving a charcuterie board and wine dockside" },
+      { n: 29, alt: "Overhead view of a charcuterie and cheese board" },
+      { n: 42, alt: "Close-up of a charcuterie board with rosemary and salami" },
+    ],
   },
 ] as const;
 
@@ -47,7 +119,9 @@ export const occasions = [
     label: "Birthday",
     icon: img(4),
     image: img(53),
+    pos: imgPos(53),
     alt: "Captain Blair with two guests celebrating a birthday aboard the Sycorax",
+    color: "from-[oklch(0.7_0.19_25)] to-[oklch(0.6_0.2_355)]",
     body: "We've hosted many birthday boat charter cruises on the Detroit River. Birthday cruises include a festive banner, a complimentary glass of champagne or beer, deluxe snacks, award-winning Bowers & Wilkins Bluetooth speakers, captain and sailor hats, and more.",
   },
   {
@@ -55,15 +129,19 @@ export const occasions = [
     label: "Graduation/ Mitzvah",
     icon: img(5),
     image: img(35),
+    pos: imgPos(35),
     alt: "Three friends laughing and cheering aboard the Sycorax with the Detroit skyline behind them",
-    body: null,
+    color: "from-[oklch(0.65_0.18_260)] to-[oklch(0.6_0.2_290)]",
+    body: "Celebrate the big milestone with your favorite people, skyline views, and a private toast on the water.",
   },
   {
     slug: "detroit-history-high-tea",
     label: "Detroit History Tour/ High Tea",
     icon: img(6),
     image: img(43),
+    pos: imgPos(43),
     alt: "Tiered stand of chocolate-dipped strawberries and canapes for a High Tea cruise",
+    color: "from-[oklch(0.62_0.16_35)] to-[oklch(0.68_0.18_70)]",
     body: "On 75-minute cruises passengers get a clear, beautiful view of the city skyline from about a mile away, while our two-hour cruises offer an up-close perspective of the entire downtown Detroit cityscape.",
   },
   {
@@ -71,23 +149,29 @@ export const occasions = [
     label: "Holidays/Friends & family time",
     icon: img(7),
     image: img(45),
+    pos: imgPos(45),
     alt: "Two women and a child in sailor caps enjoying a family cruise",
-    body: null,
+    color: "from-[oklch(0.6_0.19_150)] to-[oklch(0.68_0.17_190)]",
+    body: "Gather the crew for a relaxing cruise around Belle Isle, complete with music, snacks, and the whole family aboard.",
   },
   {
     slug: "wedding-rehearsal-dinner",
     label: "Wedding/ Rehearsal Dinner",
     icon: img(11),
     image: img(34),
+    pos: imgPos(34),
     alt: "Couple laughing together near Belle Isle during a rehearsal dinner cruise",
-    body: null,
+    color: "from-[oklch(0.68_0.15_340)] to-[oklch(0.62_0.18_10)]",
+    body: "Say your vows or toast the big day with the Detroit skyline as your backdrop and our crew handling every detail.",
   },
   {
     slug: "anniversary-proposal",
     label: "Anniversary/ Proposal",
     icon: img(8),
     image: img(50),
+    pos: imgPos(50),
     alt: "Elderly couple celebrating their anniversary with a Happy Anniversary banner aboard the Sycorax",
+    color: "from-[oklch(0.62_0.2_15)] to-[oklch(0.65_0.19_345)]",
     body: "Yes, we're always excited to make your proposal perfectly you, and a moment to treasure forever! And, no surprise, we're batting a 100% success rate.",
   },
   {
@@ -95,8 +179,10 @@ export const occasions = [
     label: "Bachelor/ette Party",
     icon: img(9),
     image: img(36),
+    pos: imgPos(36),
     alt: "Seven friends in sailor caps celebrating a bachelor party aboard the Sycorax",
-    body: null,
+    color: "from-[oklch(0.65_0.2_305)] to-[oklch(0.6_0.2_265)]",
+    body: "Bring the whole crew for champagne, sailor hats, and skyline views on your last ride before the big day.",
   },
 ] as const;
 
@@ -105,6 +191,7 @@ export const crew = [
     name: "Captain Blair",
     role: "Captain",
     image: img(13),
+    pos: imgPos(13),
     alt: "Captain Blair in a white captain's hat aboard the Sycorax",
     bio: "Every boat rental comes with an experienced captain who is certified by the U.S. Coast Guard.",
   },
@@ -112,6 +199,7 @@ export const crew = [
     name: "First Mate Allie",
     role: "First Mate",
     image: img(12),
+    pos: imgPos(12),
     alt: "First Mate at the helm of the Sycorax on the Detroit River",
     bio: "Every cruise includes a U.S. Coast Guard-certified captain and a First Mate to make your outing on the water unforgettable.",
   },
@@ -243,6 +331,7 @@ export const blogPosts = [
     date: "May 21, 2025",
     author: "Anthony Guilliom",
     image: img(27),
+    pos: imgPos(27),
     alt: "Detroit skyline at sunset from the water",
   },
   {
@@ -253,6 +342,7 @@ export const blogPosts = [
     date: "May 21, 2025",
     author: "Anthony Guilliom",
     image: img(28),
+    pos: imgPos(28),
     alt: "Ambassador Bridge at sunset over the Detroit River",
   },
   {
@@ -263,6 +353,7 @@ export const blogPosts = [
     date: "May 21, 2025",
     author: "Anthony Guilliom",
     image: img(18),
+    pos: imgPos(18),
     alt: "Illustration weighing wind power against carbon emissions",
   },
   {
@@ -274,6 +365,7 @@ export const blogPosts = [
     date: "April 29, 2025",
     author: "Anthony Guilliom",
     image: img(3),
+    pos: imgPos(3),
     alt: "Guest relaxing on the bow of the Sycorax at sunset",
   },
 ] as const;

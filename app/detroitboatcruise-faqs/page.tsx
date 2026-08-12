@@ -7,7 +7,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { BookButton } from "@/components/ui/book-button";
 import { Accordion } from "@/components/ui/accordion";
 import { Reveal } from "@/components/magic/reveal";
-import { faqs, faqTestimonial, img } from "@/content/site-data";
+import { faqs, faqTestimonial, img, imgPos } from "@/content/site-data";
 
 export const metadata: Metadata = {
   title: "FAQs",
@@ -52,6 +52,7 @@ export default function FaqsPage() {
           eyebrow="FAQs"
           title="about Detroit's exclusive electric boat cruise"
           image={img(40)}
+          imagePos={imgPos(40)}
           imageAlt="Guests at the helm of the Sycorax near the Ambassador Bridge"
         />
 

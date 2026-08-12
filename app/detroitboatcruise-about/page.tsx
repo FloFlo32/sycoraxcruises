@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
 import { BookButton } from "@/components/ui/book-button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
+import { cn } from "@/lib/utils";
 import { boatSpecs, crew, img } from "@/content/site-data";
 
 export const metadata: Metadata = {
@@ -153,7 +154,10 @@ export default function AboutPage() {
                     alt={c.alt}
                     loading="lazy"
                     decoding="async"
-                    className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className={cn(
+                      "size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]",
+                      c.pos
+                    )}
                   />
                 </div>
                 <div className="p-6">

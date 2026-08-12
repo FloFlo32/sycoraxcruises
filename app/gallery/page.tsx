@@ -4,7 +4,7 @@ import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
 import { Reveal } from "@/components/magic/reveal";
 import { Gallery } from "@/components/magic/gallery";
-import { galleryImages, img } from "@/content/site-data";
+import { galleryImages, img, imgPos } from "@/content/site-data";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -22,6 +22,7 @@ export default function GalleryPage() {
           title="Sycorax Electric Cruises is a premium private electric boat charter in Detroit"
           subtitle="For couples, families, and small groups seeking a quiet, upscale, eco-friendly Detroit River experience."
           image={img(14)}
+          imagePos={imgPos(14)}
           imageAlt="Guests aboard the Sycorax cruising the Detroit riverfront"
         />
 

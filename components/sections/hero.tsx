@@ -5,11 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { BookButton } from "@/components/ui/book-button";
 import { HeroSlideshow } from "@/components/magic/hero-slideshow";
 import { Reveal } from "@/components/magic/reveal";
-import { img } from "@/content/site-data";
+import { img, imgPos } from "@/content/site-data";
 
 const slides = [14, 38, 54, 32, 30].map((n) => ({
   src: img(n),
   alt: "Guests aboard the fully electric Sycorax on the Detroit River",
+  pos: imgPos(n),
 }));
 
 export function Hero() {
@@ -40,7 +41,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.12}>
-          <h1 className="mx-auto mt-6 max-w-2xl text-balance text-4xl font-bold leading-[1.02] sm:text-5xl md:text-6xl">
+          <h1 className="mx-auto mt-6 max-w-xl text-balance text-2xl font-bold leading-[1.15] sm:text-3xl md:text-4xl">
             Sycorax Boat Cruises&mdash;see Belle Isle and the downtown riverfront
             aboard Detroit&apos;s exclusive electric boat rental!
           </h1>
