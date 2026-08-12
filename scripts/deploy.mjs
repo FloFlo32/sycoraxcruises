@@ -107,7 +107,7 @@ try {
   try {
     sh('git commit -m "chore: initial commit from starter" --no-verify');
   } catch (e) {
-    const msg = String(e.stderr || e.message || "");
+    const msg = String(e.stdout || "") + String(e.stderr || "") + String(e.message || "");
     if (/nothing to commit/i.test(msg)) {
       console.log(`    ${c.dim("nothing to commit / already committed")}`);
     } else {
