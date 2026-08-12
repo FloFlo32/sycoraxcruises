@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 import { brand } from "@/brand.config";
 import { InstagramIcon, FacebookIcon } from "@/components/icons";
+import { BookButton } from "@/components/ui/book-button";
 
 const navCol = [
   { label: "About", href: "/detroitboatcruise-about" },
   { label: "Reviews", href: "/detroitboatcruise-reviews" },
   { label: "FAQs", href: "/detroitboatcruise-faqs" },
-  { label: "Book Our Boat Today", href: "/boat-rental-book-online" },
   { label: "Gift Certificate", href: "/detroitboatcruise-contact" },
 ];
 
@@ -77,6 +77,14 @@ export function Footer() {
         <div>
           <h4 className="font-display text-sm font-semibold">Book</h4>
           <ul className="mt-4 space-y-2.5">
+            <li>
+              <BookButton
+                variant="link"
+                className="h-auto p-0 text-sm font-normal text-muted-foreground transition-colors hover:text-foreground hover:no-underline"
+              >
+                Book Our Boat Today
+              </BookButton>
+            </li>
             {navCol.map((l) => (
               <li key={l.label}>
                 <Link

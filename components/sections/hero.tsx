@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Anchor, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BookButton } from "@/components/ui/book-button";
 import { HeroSlideshow } from "@/components/magic/hero-slideshow";
 import { Reveal } from "@/components/magic/reveal";
 import { img } from "@/content/site-data";
@@ -55,11 +56,9 @@ export function Hero() {
 
         <Reveal delay={0.24}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg" className="h-12 rounded-lg px-7 text-base">
-              <Link href="/boat-rental-book-online">
-                book our boat today <ArrowRight className="size-4" />
-              </Link>
-            </Button>
+            <BookButton size="lg" className="h-12 rounded-lg px-7 text-base">
+              book our boat today <ArrowRight className="size-4" />
+            </BookButton>
             <Button
               asChild
               size="lg"

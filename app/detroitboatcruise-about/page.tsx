@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Award, Leaf, Ruler, Ship, XCircle } from "lucide-react";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
-import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/ui/book-button";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { boatSpecs, crew, img } from "@/content/site-data";
 
@@ -175,9 +174,9 @@ export default function AboutPage() {
               Your Journey Awaits
             </h2>
             <div className="mt-8">
-              <Button asChild size="lg" className="rounded-full">
-                <Link href="/boat-rental-book-online">Book Our Boat Today</Link>
-              </Button>
+              <BookButton size="lg" className="rounded-full">
+                Book Our Boat Today
+              </BookButton>
             </div>
           </Reveal>
         </section>

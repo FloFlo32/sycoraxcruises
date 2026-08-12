@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/ui/book-button";
 import { GridPattern } from "@/components/magic/grid-pattern";
 import { Reveal } from "@/components/magic/reveal";
 
@@ -18,11 +19,9 @@ export function CTA() {
             experience the very best of summer in Michigan.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg" className="rounded-full">
-              <Link href="/boat-rental-book-online">
-                Book Our Boat Today <ArrowRight className="size-4" />
-              </Link>
-            </Button>
+            <BookButton size="lg" className="rounded-full">
+              Book Our Boat Today <ArrowRight className="size-4" />
+            </BookButton>
             <Button asChild size="lg" variant="outline" className="rounded-full">
               <Link href="/detroitboatcruise-contact">Questions? Contact us</Link>
             </Button>

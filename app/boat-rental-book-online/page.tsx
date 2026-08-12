@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ArrowRight, Clock, Users } from "lucide-react";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
-import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/ui/book-button";
 import { BorderBeam } from "@/components/magic/border-beam";
 import { RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { packages, img } from "@/content/site-data";
@@ -65,11 +64,9 @@ export default function BookOnlinePage() {
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-2xl font-bold text-primary">{p.price}</span>
                   </div>
-                  <Button asChild className="mt-1 w-full rounded-full">
-                    <Link href={`/detroitboatcruise-contact?package=${encodeURIComponent(p.name)}`}>
-                      Book this cruise <ArrowRight className="size-4" />
-                    </Link>
-                  </Button>
+                  <BookButton activityId={p.activityId} className="mt-1 w-full rounded-full">
+                    Book this cruise <ArrowRight className="size-4" />
+                  </BookButton>
                 </div>
               </RevealItem>
             ))}

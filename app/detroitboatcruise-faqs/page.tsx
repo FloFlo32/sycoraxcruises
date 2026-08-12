@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { PageHero } from "@/components/sections/page-hero";
-import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/ui/book-button";
 import { Accordion } from "@/components/ui/accordion";
 import { Reveal } from "@/components/magic/reveal";
 import { faqs, faqTestimonial, img } from "@/content/site-data";
@@ -79,9 +79,9 @@ export default function FaqsPage() {
               Book your cruise today
             </h2>
             <div className="mt-6">
-              <Button asChild size="lg" className="rounded-full">
-                <Link href="/boat-rental-book-online">Book the Best</Link>
-              </Button>
+              <BookButton size="lg" className="rounded-full">
+                Book the Best
+              </BookButton>
             </div>
           </Reveal>
         </section>

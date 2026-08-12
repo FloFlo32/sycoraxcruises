@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ArrowUpRight, Clock, Users } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/magic/reveal";
 import { BorderBeam } from "@/components/magic/border-beam";
+import { BookButton } from "@/components/ui/book-button";
 import { packages } from "@/content/site-data";
 
 export function Packages() {
@@ -49,12 +49,13 @@ export function Packages() {
               <p className="text-pretty text-sm text-muted-foreground">{p.description}</p>
               <div className="mt-auto flex items-center justify-between pt-3">
                 <span className="text-2xl font-bold text-primary">{p.price}</span>
-                <Link
-                  href="/boat-rental-book-online"
-                  className="inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                <BookButton
+                  activityId={p.activityId}
+                  variant="link"
+                  className="h-auto p-0 text-sm font-medium"
                 >
                   Book <ArrowUpRight className="size-3.5" />
-                </Link>
+                </BookButton>
               </div>
             </div>
           </RevealItem>

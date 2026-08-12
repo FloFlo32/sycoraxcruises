@@ -8,6 +8,7 @@ const img = (n: number) => `/ingested/sycoraxcruises/img-${String(n).padStart(3,
 export const packages = [
   {
     name: "Belle Isle Breeze",
+    activityId: "0574ca5d-536d-49fb-b999-a6cefb8b3fb5",
     duration: "75 minutes",
     guests: "Up to 6 guests",
     price: "$275 day / $350 evening",
@@ -18,6 +19,7 @@ export const packages = [
   },
   {
     name: "City Sights River Cruise",
+    activityId: "02d1fc06-d54e-443c-9206-29ae86b618a6",
     duration: "2 hours",
     guests: "Up to 6 guests",
     price: "$450",
@@ -28,6 +30,7 @@ export const packages = [
   },
   {
     name: "Hidden Cove Haven",
+    activityId: "eb43c004-d97e-48b7-b9f0-ee5029d5caf7",
     duration: "4 hours",
     guests: "Up to 6 guests",
     price: "$800",
