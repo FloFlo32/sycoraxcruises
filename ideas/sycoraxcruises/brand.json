@@ -1,0 +1,231 @@
+{
+  "source": "https://www.sycoraxcruises.com/",
+  "ingestedFromHost": "sycoraxcruises.com",
+  "pagesCrawled": 9,
+  "name": "Sycorax Cruises",
+  "tagline": "Sycorax Cruises",
+  "description": "Tour Belle Isle and the downtown Detroit riverfront aboard the Sycorax, offering Detroit’s only zero-emissions power boat rentals! On our fully electric boat rides, passengers experience the best in eco-luxury, bar none.",
+  "domain": "sycoraxcruises.com",
+  "brandColor": {
+    "hex": "#3b5998",
+    "src": "css-frequency",
+    "oklchHue": 264
+  },
+  "theme": {
+    "hue": 264
+  },
+  "fonts": [],
+  "logo": "assets/logo.webp",
+  "logoNote": null,
+  "favicon": "https://www.sycoraxcruises.com/undefined",
+  "images": [
+    "/ingested/sycoraxcruises/img-001.webp",
+    "/ingested/sycoraxcruises/img-002.webp",
+    "/ingested/sycoraxcruises/img-003.webp",
+    "/ingested/sycoraxcruises/img-004.webp",
+    "/ingested/sycoraxcruises/img-005.webp",
+    "/ingested/sycoraxcruises/img-006.webp",
+    "/ingested/sycoraxcruises/img-007.webp",
+    "/ingested/sycoraxcruises/img-008.webp",
+    "/ingested/sycoraxcruises/img-009.webp",
+    "/ingested/sycoraxcruises/img-010.webp",
+    "/ingested/sycoraxcruises/img-011.webp",
+    "/ingested/sycoraxcruises/img-012.webp",
+    "/ingested/sycoraxcruises/img-013.webp",
+    "/ingested/sycoraxcruises/img-014.webp",
+    "/ingested/sycoraxcruises/img-015.webp",
+    "/ingested/sycoraxcruises/img-016.webp",
+    "/ingested/sycoraxcruises/img-017.webp",
+    "/ingested/sycoraxcruises/img-018.webp",
+    "/ingested/sycoraxcruises/img-019.webp",
+    "/ingested/sycoraxcruises/img-020.webp",
+    "/ingested/sycoraxcruises/img-021.webp",
+    "/ingested/sycoraxcruises/img-022.webp",
+    "/ingested/sycoraxcruises/img-023.webp",
+    "/ingested/sycoraxcruises/img-024.webp",
+    "/ingested/sycoraxcruises/img-025.webp",
+    "/ingested/sycoraxcruises/img-026.webp",
+    "/ingested/sycoraxcruises/img-027.webp",
+    "/ingested/sycoraxcruises/img-028.webp",
+    "/ingested/sycoraxcruises/img-029.webp",
+    "/ingested/sycoraxcruises/img-030.webp",
+    "/ingested/sycoraxcruises/img-031.webp",
+    "/ingested/sycoraxcruises/img-032.webp",
+    "/ingested/sycoraxcruises/img-033.webp",
+    "/ingested/sycoraxcruises/img-034.webp",
+    "/ingested/sycoraxcruises/img-035.webp",
+    "/ingested/sycoraxcruises/img-036.webp",
+    "/ingested/sycoraxcruises/img-037.webp",
+    "/ingested/sycoraxcruises/img-038.webp",
+    "/ingested/sycoraxcruises/img-039.webp",
+    "/ingested/sycoraxcruises/img-040.webp",
+    "/ingested/sycoraxcruises/img-041.webp",
+    "/ingested/sycoraxcruises/img-042.webp",
+    "/ingested/sycoraxcruises/img-043.webp",
+    "/ingested/sycoraxcruises/img-044.webp",
+    "/ingested/sycoraxcruises/img-045.webp",
+    "/ingested/sycoraxcruises/img-046.webp",
+    "/ingested/sycoraxcruises/img-047.webp",
+    "/ingested/sycoraxcruises/img-048.webp",
+    "/ingested/sycoraxcruises/img-049.webp",
+    "/ingested/sycoraxcruises/img-050.webp",
+    "/ingested/sycoraxcruises/img-051.webp",
+    "/ingested/sycoraxcruises/img-052.webp",
+    "/ingested/sycoraxcruises/img-053.webp",
+    "/ingested/sycoraxcruises/img-054.webp",
+    "/ingested/sycoraxcruises/img-055.webp"
+  ],
+  "imageCount": 55,
+  "social": {
+    "instagram": "http://instagram.com/sycoraxcruises"
+  },
+  "whatsapp": null,
+  "phone": null,
+  "location": null,
+  "sectionOrder": [
+    "Sycorax Boat Cruises—see Belle Isle and the downtown riverfront aboard Detroit’s exclusive electric boat rental!",
+    "100% Electric 100% Awesome",
+    "Our approach",
+    "Your voyage is our passion",
+    "Departure",
+    "Birthday",
+    "Graduation/ Mitzvah",
+    "Detroit History Tour/ High Tea",
+    "Holidays/Friends & family time",
+    "Wedding/ Rehearsal Dinner",
+    "Anniversary/ Proposal",
+    "Bachelor/ette Party"
+  ],
+  "navItems": [
+    {
+      "text": "Skip to Content @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) { .header-blur-background { } } Gallery About Reviews FAQs Blog Contact book our boat today .top-bun, .patty, .bottom-bun { height: 1px; } Open Menu Close Menu Gallery About Reviews FAQs Blog Contact book our boat today .top-bun, .patty, .bottom-bun { height: 1px; } Open Menu Close Menu Gallery About Reviews FAQs Blog Contact book our boat today",
+      "url": "https://www.sycoraxcruises.com/undefined",
+      "path": "/undefined"
+    },
+    {
+      "text": "Gallery",
+      "url": "https://www.sycoraxcruises.com/gallery",
+      "path": "/gallery"
+    },
+    {
+      "text": "About",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-about",
+      "path": "/detroitboatcruise-about"
+    },
+    {
+      "text": "Reviews",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-reviews",
+      "path": "/detroitboatcruise-reviews"
+    },
+    {
+      "text": "FAQs",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-faqs",
+      "path": "/detroitboatcruise-faqs"
+    },
+    {
+      "text": "Blog",
+      "url": "https://www.sycoraxcruises.com/blog",
+      "path": "/blog"
+    },
+    {
+      "text": "Contact",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-contact",
+      "path": "/detroitboatcruise-contact"
+    },
+    {
+      "text": "book our boat today",
+      "url": "https://www.sycoraxcruises.com/boat-rental-book-online",
+      "path": "/boat-rental-book-online"
+    }
+  ],
+  "footerItems": [
+    {
+      "text": "Contact us",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-contact",
+      "path": "/detroitboatcruise-contact"
+    },
+    {
+      "text": "About",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-about",
+      "path": "/detroitboatcruise-about"
+    },
+    {
+      "text": "Reviews",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-reviews",
+      "path": "/detroitboatcruise-reviews"
+    },
+    {
+      "text": "FAQs",
+      "url": "https://www.sycoraxcruises.com/detroitboatcruise-faqs",
+      "path": "/detroitboatcruise-faqs"
+    },
+    {
+      "text": "Book Our Boat Today",
+      "url": "https://www.sycoraxcruises.com/boat-rental-book-online",
+      "path": "/boat-rental-book-online"
+    }
+  ],
+  "innerPages": [
+    {
+      "path": "/cart",
+      "title": "Sycorax Cruises",
+      "sections": []
+    },
+    {
+      "path": "/gallery",
+      "title": "Gallery — Sycorax Cruises",
+      "sections": [
+        "Sycorax Electric Cruises is a premium private electric boat charter in Detroit for couples, families, and small groups seeking a quiet, upscale, eco-friendly Detroit River experience."
+      ]
+    },
+    {
+      "path": "/detroitboatcruise-about",
+      "title": "About - Sycorax Electric Private Boat Charter Detroit — Sycorax Cruises",
+      "sections": [
+        "Tour the riverfront in luxury and eco-style aboard Detroit’s only zero-emissions power boat rental",
+        "Your Journey Awaits"
+      ]
+    },
+    {
+      "path": "/detroitboatcruise-reviews",
+      "title": "Guest Reviews - Why our private boat cruises are the best in Detroit — Sycorax Cruises",
+      "sections": [
+        "See why our electric boat rentals stand out from the crowd in Detroit’s cruise scene",
+        "Questions before getting started? Get in touch."
+      ]
+    },
+    {
+      "path": "/detroitboatcruise-faqs",
+      "title": "Private Electric Boat Cruise - FAQ — Sycorax Cruises",
+      "sections": [
+        "FAQs",
+        "about Detroit’s exclusive electric boat cruise",
+        "Book your cruise today"
+      ]
+    },
+    {
+      "path": "/blog",
+      "title": "Blog - Sycorax Electric Boat Private Detroit Charter Cruises — Sycorax Cruises",
+      "sections": [
+        "Detroit Boat Rentals",
+        "Guest favorite destinations",
+        "Unique and offbeat stuff - why we❤️Detroit",
+        "Let’s try a different tack: Electric boating",
+        "Welcome aboard!"
+      ]
+    },
+    {
+      "path": "/detroitboatcruise-contact",
+      "title": "Contact - Sycorax Electric Boat Rental Tour Cruise — Sycorax Cruises",
+      "sections": [
+        "Questions about our Detroit boat rentals? Get in touch.",
+        "Contact us."
+      ]
+    },
+    {
+      "path": "/boat-rental-book-online",
+      "title": "Book online - Sycorax Electric Boat Private Detroit Charter Cruises — Sycorax Cruises",
+      "sections": []
+    }
+  ]
+}

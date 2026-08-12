@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: brand.name,
     description: brand.description,
-    creator: `@${brand.social.x}`,
   },
 };
 

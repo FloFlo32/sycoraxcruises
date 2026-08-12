@@ -3,16 +3,16 @@
 import * as React from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { brand } from "@/brand.config";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#features", label: "Features" },
-  { href: "#bento", label: "Why us" },
-  { href: "#stats", label: "Results" },
-  { href: "#cta", label: "Pricing" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/detroitboatcruise-about", label: "About" },
+  { href: "/detroitboatcruise-reviews", label: "Reviews" },
+  { href: "/detroitboatcruise-faqs", label: "FAQs" },
+  { href: "/blog", label: "Blog" },
+  { href: "/detroitboatcruise-contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -31,24 +31,26 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "border-b border-border/60 bg-background/70 backdrop-blur-xl"
-          : "border-b border-transparent"
+          ? "border-b border-border/60 bg-background/85 backdrop-blur-xl shadow-sm"
+          : "border-b border-transparent bg-background/0"
       )}
     >
-      <nav className="container-px mx-auto flex h-16 max-w-6xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight">
-          <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground shadow-sm shadow-primary/30">
-            {brand.name.charAt(0)}
-          </span>
-          {brand.name}
+      <nav className="container-px mx-auto flex h-20 max-w-7xl items-center justify-between">
+        <Link href="/" className="flex items-center" aria-label="Sycorax Cruises home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.webp"
+            alt="Sycorax Electric Cruises"
+            className="h-11 w-auto sm:h-12"
+          />
         </Link>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/70 transition-colors hover:bg-accent hover:text-foreground"
             >
               {l.label}
             </Link>
@@ -56,15 +58,15 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <Button asChild size="sm" className="hidden md:inline-flex">
-            <Link href="#cta">Get started</Link>
+          <Button asChild size="lg" className="hidden rounded-full lg:inline-flex">
+            <Link href="/boat-rental-book-online">book our boat today</Link>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             aria-label="Toggle menu"
+            aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -73,21 +75,21 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-border/60 bg-background/95 backdrop-blur-xl md:hidden">
-          <div className="container-px mx-auto flex max-w-6xl flex-col gap-1 py-4">
+        <div className="border-t border-border/60 bg-background/95 backdrop-blur-xl lg:hidden">
+          <div className="container-px mx-auto flex max-w-7xl flex-col gap-1 py-4">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm text-muted-foreground hover:bg-accent hover:text-foreground"
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/80 hover:bg-accent hover:text-foreground"
               >
                 {l.label}
               </Link>
             ))}
-            <Button asChild className="mt-2">
-              <Link href="#cta" onClick={() => setOpen(false)}>
-                Get started
+            <Button asChild className="mt-2 rounded-full">
+              <Link href="/boat-rental-book-online" onClick={() => setOpen(false)}>
+                book our boat today
               </Link>
             </Button>
           </div>

@@ -1,9 +1,12 @@
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
-import { LogoCloud } from "@/components/sections/logo-cloud";
-import { Bento } from "@/components/sections/bento";
-import { Features } from "@/components/sections/features";
-import { Proof } from "@/components/sections/stats";
+import { Electric } from "@/components/sections/electric";
+import { Approach } from "@/components/sections/approach";
+import { Packages } from "@/components/sections/packages";
+import { Occasions } from "@/components/sections/occasions";
+import { SycoraxBoat } from "@/components/sections/sycorax-boat";
+import { Testimonial } from "@/components/sections/testimonial";
+import { BlogTeaser } from "@/components/sections/blog-teaser";
 import { CTA } from "@/components/sections/cta";
 import { Footer } from "@/components/sections/footer";
 
@@ -13,10 +16,13 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <LogoCloud />
-        <Features />
-        <Bento />
-        <Proof />
+        <Electric />
+        <Approach />
+        <Packages />
+        <Occasions />
+        <SycoraxBoat />
+        <Testimonial />
+        <BlogTeaser />
         <CTA />
       </main>
       <Footer />
