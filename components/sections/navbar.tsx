@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookButton } from "@/components/ui/book-button";
 import { cn } from "@/lib/utils";
 import { packages } from "@/content/site-data";
 
@@ -139,9 +140,9 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button asChild size="lg" className="hidden rounded-full lg:inline-flex">
-            <Link href="/boat-rental-book-online">book our boat today</Link>
-          </Button>
+          <BookButton size="lg" className="hidden rounded-full lg:inline-flex">
+            book our boat today
+          </BookButton>
           <Button
             variant="ghost"
             size="icon"
@@ -216,11 +217,9 @@ export function Navbar() {
                 </Link>
               );
             })}
-            <Button asChild className="mt-2 rounded-full">
-              <Link href="/boat-rental-book-online" onClick={() => setOpen(false)}>
-                book our boat today
-              </Link>
-            </Button>
+            <BookButton className="mt-2 rounded-full" onClick={() => setOpen(false)}>
+              book our boat today
+            </BookButton>
           </div>
         </div>
       )}
