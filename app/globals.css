@@ -201,6 +201,19 @@
   color: transparent;
 }
 
+/* Gradient text for white headlines over a photo hero — white fading into the brand hue. */
+@utility text-gradient-hero {
+  background: linear-gradient(
+    100deg,
+    white,
+    color-mix(in oklch, var(--color-primary) 70%, white) 55%,
+    var(--color-primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Brand gradient fill — for buttons, borders, panels. */
 @utility bg-brand-gradient {
   background-image: linear-gradient(

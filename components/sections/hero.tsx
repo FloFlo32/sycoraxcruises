@@ -41,7 +41,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.12}>
-          <h1 className="mx-auto mt-6 max-w-xl text-balance text-2xl font-bold leading-[1.15] sm:text-3xl md:text-4xl">
+          <h1 className="text-gradient-hero mx-auto mt-6 max-w-xl text-balance text-2xl font-bold leading-[1.15] sm:text-3xl md:text-4xl">
             Sycorax Boat Cruises&mdash;see Belle Isle and the downtown riverfront
             aboard Detroit&apos;s exclusive electric boat rental!
           </h1>
