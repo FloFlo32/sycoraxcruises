@@ -24,7 +24,7 @@ export function BlogTeaser() {
         {blogPosts.map((p) => (
           <RevealItem key={p.slug}>
             <ImageCard
-              href="/blog"
+              href={`/blog/${p.slug}`}
               src={p.image}
               alt={p.alt}
               title={p.homeTeaser}

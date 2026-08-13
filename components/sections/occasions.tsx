@@ -37,12 +37,11 @@ export function Occasions() {
                 />
                 <span
                   className={cn(
-                    "absolute bottom-3 left-3 grid size-11 place-items-center rounded-xl bg-gradient-to-br shadow-lg ring-2 ring-white/70",
+                    "absolute bottom-3 left-3 grid size-12 place-items-center rounded-xl bg-gradient-to-br shadow-lg ring-2 ring-white/70",
                     o.color
                   )}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={o.icon} alt="" aria-hidden className="size-6 brightness-0 invert" />
+                  <o.icon className="size-6 text-white" aria-hidden />
                 </span>
               </div>
 
