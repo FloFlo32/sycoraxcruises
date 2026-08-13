@@ -3,6 +3,16 @@
  * Every string here is copied from the live site. Do not paraphrase when editing.
  */
 
+import {
+  Cake,
+  GraduationCap,
+  Landmark,
+  Gift,
+  HeartHandshake,
+  Gem,
+  PartyPopper,
+} from "lucide-react";
+
 const img = (n: number) => `/ingested/sycoraxcruises/img-${String(n).padStart(3, "0")}.webp`;
 
 /**
@@ -117,7 +127,7 @@ export const occasions = [
   {
     slug: "birthday",
     label: "Birthday",
-    icon: img(4),
+    icon: Cake,
     image: img(53),
     pos: imgPos(53),
     alt: "Captain Blair with two guests celebrating a birthday aboard the Sycorax",
@@ -127,17 +137,17 @@ export const occasions = [
   {
     slug: "graduation-mitzvah",
     label: "Graduation/ Mitzvah",
-    icon: img(5),
+    icon: GraduationCap,
     image: img(35),
     pos: imgPos(35),
     alt: "Three friends laughing and cheering aboard the Sycorax with the Detroit skyline behind them",
     color: "from-[oklch(0.65_0.18_260)] to-[oklch(0.6_0.2_290)]",
-    body: "Celebrate the big milestone with your favorite people, skyline views, and a private toast on the water.",
+    body: "Celebrate the big milestone with your favorite people aboard the Sycorax. Cruise past the Detroit skyline, pop some champagne, and mark the occasion with a private toast on the water, a graduation or a Bar or Bat Mitzvah made unforgettable.",
   },
   {
     slug: "detroit-history-high-tea",
     label: "Detroit History Tour/ High Tea",
-    icon: img(6),
+    icon: Landmark,
     image: img(43),
     pos: imgPos(43),
     alt: "Tiered stand of chocolate-dipped strawberries and canapes for a High Tea cruise",
@@ -147,42 +157,42 @@ export const occasions = [
   {
     slug: "holidays-friends-family",
     label: "Holidays/Friends & family time",
-    icon: img(7),
+    icon: Gift,
     image: img(45),
     pos: imgPos(45),
     alt: "Two women and a child in sailor caps enjoying a family cruise",
     color: "from-[oklch(0.6_0.19_150)] to-[oklch(0.68_0.17_190)]",
-    body: "Gather the crew for a relaxing cruise around Belle Isle, complete with music, snacks, and the whole family aboard.",
+    body: "Gather the crew for a relaxing cruise around Belle Isle, complete with great tunes, deluxe snacks, and complimentary drinks. A laid-back way to spend the holidays or a rare afternoon with friends and family, all in one place, on the water.",
   },
   {
     slug: "wedding-rehearsal-dinner",
     label: "Wedding/ Rehearsal Dinner",
-    icon: img(11),
+    icon: HeartHandshake,
     image: img(34),
     pos: imgPos(34),
     alt: "Couple laughing together near Belle Isle during a rehearsal dinner cruise",
     color: "from-[oklch(0.68_0.15_340)] to-[oklch(0.62_0.18_10)]",
-    body: "Say your vows or toast the big day with the Detroit skyline as your backdrop and our crew handling every detail.",
+    body: "Say your vows on the water or toast the night before with the Detroit skyline as your backdrop. Our crew handles the champagne, the music, and every detail, so you can just enjoy the ride with your favorite people.",
   },
   {
     slug: "anniversary-proposal",
     label: "Anniversary/ Proposal",
-    icon: img(8),
+    icon: Gem,
     image: img(50),
     pos: imgPos(50),
     alt: "Elderly couple celebrating their anniversary with a Happy Anniversary banner aboard the Sycorax",
     color: "from-[oklch(0.62_0.2_15)] to-[oklch(0.65_0.19_345)]",
-    body: "Yes, we're always excited to make your proposal perfectly you, and a moment to treasure forever! And, no surprise, we're batting a 100% success rate.",
+    body: "Yes, we're always excited to make your proposal perfectly you, and a moment to treasure forever! And, no surprise, we're batting a 100% success rate. Whether it's your first anniversary or your fortieth, we'll deck out the boat to celebrate.",
   },
   {
     slug: "bachelor-ette-party",
     label: "Bachelor/ette Party",
-    icon: img(9),
+    icon: PartyPopper,
     image: img(36),
     pos: imgPos(36),
     alt: "Seven friends in sailor caps celebrating a bachelor party aboard the Sycorax",
     color: "from-[oklch(0.65_0.2_305)] to-[oklch(0.6_0.2_265)]",
-    body: "Bring the whole crew for champagne, sailor hats, and skyline views on your last ride before the big day.",
+    body: "Bring the whole crew for champagne, sailor hats, and skyline views on your last ride before the big day. Play your own music, open up the throttle, and let the Detroit River do the rest for your bachelor or bachelorette party.",
   },
 ] as const;
 
@@ -333,6 +343,28 @@ export const blogPosts = [
     image: img(27),
     pos: imgPos(27),
     alt: "Detroit skyline at sunset from the water",
+    content: [
+      {
+        type: "p",
+        text: "A marina lunch or dinner on the water is a frequent destination for Detroit strait boaters on a lovely summer day. Our region has several restaurants that offer dock access within comfortable boating distance covering a broad variety of experiences targeted toward different preferences, so read on for our take on what might best suit your needs.",
+      },
+      {
+        type: "p",
+        text: "Mike's on the Water (Jefferson Dock) is a landlubber twin for the popular television series Cheers. Mike's is a cheerful, friendly, charming little joint, offering a classic bar, draft beer, and some pretty outstanding lobster rolls (we recommend the butter-only roll). They also offer standard pub fare (burgers, fries, etc), service is prompt, and prices very reasonable (mains $15-$20). They have a bumping outdoor patio.",
+      },
+      {
+        type: "p",
+        text: "Watermark (Safe Harbour) channels TGI Fridays. Watermark is a very large venue with accomodations available for big groups. They're oriented towards events and family gatherings, and everyone can find something to eat. They have a big outdoor patio, and there's easy parking if you'd like friends to meet you there, plus good service. Mains $20-$30ish.",
+      },
+      {
+        type: "p",
+        text: "Hook (Safe Harbour) is akin to the popular Midtown Detroit-based Whitney restaurant. Hook provides genuinely excellent fare in a classy setting. Mains are $20-$50. We especially enjoy the raw bar, signature crab cakes, and seafood towers. We can arrange for dedicated service on the boat, or you may dine indoors or on the lively patio. Excellent cocktails and broad wine selection. We enthusiastically recommend this elevated option for any special event.",
+      },
+      {
+        type: "p",
+        text: "Sindbad's serves up fare with the familiar vibe of a Denny's restaurant plus seafood options to boot. Long a Detroit favorite, this moderately sized marina restaurant is easily accessible by land or sea. It's been around for many decades and has long been a marina standard for the metro area. Mains run $20-$50. Service is very good and personable. No patio.",
+      },
+    ],
   },
   {
     slug: "why-we-love-detroit",
@@ -344,6 +376,85 @@ export const blogPosts = [
     image: img(28),
     pos: imgPos(28),
     alt: "Ambassador Bridge at sunset over the Detroit River",
+    content: [
+      {
+        type: "p",
+        text: "We, Captain Blair and First Mate Allie, wear many hats. We've had the pleasure of hosting Airbnb suites for a few years now (the Phunky Pheasant, in North Corktown, adjoining downtown Detroit), and our guests often ask for our recommendations for dining, entertainment, and offbeat cultural destinations locally. We've had much fun helping folks navigate the best of the great city of Detroit that we love so much. (They've been very kind to us in turn, we're Superhosts, and all of our suites are Guest Preferred, top 15% worldwide). Our guests have loved our recommendations, and we hope you'll find them useful, too.",
+      },
+      { type: "p", text: "This week, let's focus on everyone's favorite subject: restaurants!" },
+      { type: "h3", text: "Our top 3 Phunky favorites" },
+      {
+        type: "p",
+        text: "First, our top three Phunky favorites, they all tend toward the smaller, a little off-the-beaten-path vibe, and maybe that's why we love them so much. At these places, you're likely to meet the owner or chef. If you're looking for a weekend dinner, it's best to reserve, as most book up early on weekends.",
+      },
+      {
+        type: "p",
+        text: "Lena, downtown, is where the beautiful people go, and for good reason: inventive Spanish tapas, eco-calm ambience (we love eating at the bar tables), and fantastic shareable plates. Mains $30ish, but focus on the smaller, shared fare: honguitos ahumados (wild mushrooms & roasted hazelnuts doused in fried egg sauce, their sous chef has a degree in forage-ology), and the jamon iberico, do not leave without sampling these. And where else can you get an Ibigo's monologue cocktail?",
+      },
+      {
+        type: "p",
+        text: "About three blocks from your suite, Takoi is Thai fusion that is on point. Fun dishes like charred long beans, Korean bbq short ribs, and pastrami noodles (pastrami Asian is a thing in Detroit). Mains around $20. Beware, they've been heavy on the heat lately. If you go, try the Promises in Vortex cocktail, somehow, we can never leave sober.",
+      },
+      {
+        type: "p",
+        text: "A little off the beaten path, but uniquely Detroit is Flowers of Vietnam. A former Greek coney doubling as Vietnamese fusion with a Middle Eastern chef in Mexicantown with a Detroit flavored staff. This mutt of a restaurant pulls off amazingly good food. The caramel chicken wings are an incredible must-try. If you get the Com Tam for 2, you'll get a great sampling of their best. Mains cost around $20.",
+      },
+      { type: "h3", text: "Vegetarian & vegan picks" },
+      {
+        type: "p",
+        text: "Are you vegetarian or vegan? All three of the above have some excellent options, but we'll suggest an additional few with respectable choices just for you.",
+      },
+      {
+        type: "p",
+        text: "If you are pescatarian, Mink is a warm, intimate seafood chef's board five-course delight, only a mile from the Phunky Pheasant. Fun, creative seafood focused plates. Reservations are a must, $75/person, drinks as you go.",
+      },
+      {
+        type: "p",
+        text: "Another great place within a few blocks, Grandma Bob's does some of our favorite Detroit-style pizza, much of it available vegan. The vegan Big Mac pizza is as good as it gets. Their pickle bar pizza is also on point (if it's not on the menu, just ask your server).",
+      },
+      {
+        type: "p",
+        text: "The Kitchen by Que, in New Center, is a stylish, intimate vegan spot with a fresh take on bistro classics, plus smoothies and coffee drinks. Mains $15.",
+      },
+      { type: "h3", text: "Uniquely Detroit and budget friendly" },
+      {
+        type: "p",
+        text: "Want to try something uniquely Detroit, and budget friendly, while you're in town? We got you.",
+      },
+      {
+        type: "p",
+        text: "Try the coney challenge. Two Detroit coney icons, American and Lafayette, sit side-by-side in the heart of downtown. Originally owned by feuding brothers, these two spots famously serve uniquely Detroit coneys, a chili dog doused in chili sauce, mustard and onion. Try one of each, and pick your fave, but beware, Detroiters have strong emotions around their choices and may throw down on the topic.",
+      },
+      {
+        type: "p",
+        text: "Detroit has one of the biggest Lebanese populations outside Lebanon, focused in Dearborn, seven miles or so from downtown Detroit. Al Tayeb is a Lebanese breakfast diner open until 2 p.m. or so. The food is really outstanding, and you'll probably sample dishes you've never tried before, many under $10 (note: closed during Ramadan). Try Al Ameer for lunch or dinner; Al Ameer is nationally recognized for its excellence, and the Al Ameer combo or family tray are amazing meals. And while you're in the neighborhood, you probably won't have room, but stop at Shatila Bakery afterwards anyway for a jaw-dropping sugar rush.",
+      },
+      { type: "h3", text: "Detroit's pizza scene" },
+      {
+        type: "p",
+        text: "Of course, we have to mention pizza, especially Detroit-style. So, odd fact: Detroit is one of the pizza capitals of the world. Some years, we have even more pizza parlors per capita than New York City or New Jersey. If you love pizza (who doesn't, right?), you could spend an afternoon, or spread it out over a few days, and experience Detroit's impressive variety. Our favorites, per style:",
+      },
+      {
+        type: "list",
+        items: [
+          "Italian: Supinos, which may also be the best of any style, serves a perfect pie.",
+          "New York: Mootz, true charred thin crust goodness, and the garlic knots are on point.",
+          "Detroit, old school: Buddy's, arguably the original Detroit style pizza. Fantastic pies; BLT isn't on the menu, but ask for it.",
+          "Detroit, new wave: Michigan & Trumbull, daring new adventures in Detroit-style; they've added a great new spin to a classic. Try the McLovin, and the veggie apps are all crisp & fresh.",
+          "Late night greasy: When nothing but a late-night greasy slice will do, Sgt. Pepperoni's is where we head. Open til midnight/2 a.m.",
+          "California/Other: For unique and offbeat pizza, check out Pie Sci, just off Wayne State University's campus.",
+          "Chicago: Recently, Detroit-style pizzas have become a national hot button, and have eclipsed the Windy City, but if Chicago-style is what you crave, Chicago's Pizza is in Mexicantown by Clark Park.",
+        ],
+      },
+      {
+        type: "p",
+        text: "BTW, if you're a fan, Sweetwater Tavern has the best damn wings in town, hands down.",
+      },
+      {
+        type: "p",
+        text: "Hope you found some inspiration for food dreams on this post! Detroit is, in our minds, a food-lover's paradise for all.",
+      },
+    ],
   },
   {
     slug: "electric-boating",
@@ -355,6 +466,40 @@ export const blogPosts = [
     image: img(18),
     pos: imgPos(18),
     alt: "Illustration weighing wind power against carbon emissions",
+    content: [
+      {
+        type: "p",
+        text: "If you're reading this blog, chances are you have an interest in boating. For folks living in and visiting the Detroit area and Michigan, a cruise through the sparkling blue waters of the Great Lakes is the perfect way to enjoy a beautiful summer day. From fishing and skiing to pleasure cruising and swimming, we love to make the most of these world-treasured lakes and rivers we are privileged to access. And we rely on gas-powered boats to power these adventures through our pristine waters.",
+      },
+      {
+        type: "p",
+        text: "But let's dive a bit deeper. While much attention has been paid to the environmental damage done by gas-powered automobiles, we are as a society less aware of the impact gas-powered boats have on our planet. So, are gas-powered boats bad for the environment? In a word: absolutely. According to a study conducted by the National Institutes of Health, The Environmental Pain of Pleasure Boating, two-stroke-engine watercraft pollute vastly more per hour than cars. For comparison's sake, a standard five-hour yacht cruise consumes as much gas as a car driving from New York to L.A.",
+      },
+      {
+        type: "p",
+        text: "Also consider that Michigan is the number one state in the U.S. for total number of boats registered, according to a recent estimate, which revealed that 1.7 million boats are registered in the state. That's a whole lot of pollutants going into our air and waters. Carbon emissions aside, combustion engines pollute the environment even further by spilling oil and other chemicals into our waters as well.",
+      },
+      {
+        type: "p",
+        text: "Considering the outsized impact gas-powered boats have on our environment, a zero-emissions solution is exactly what the boating world desperately needs. And that's one big reason why we are so excited to bring our electric boat cruises to the Detroit area. By booking an electric cruise on the Sycorax, you're eliminating all those carbon emissions. That's the equivalent of planting six trees per four-hour cruise on the Sycorax.",
+      },
+      {
+        type: "p",
+        text: "Here's the scoop: The Sycorax is a 2023 X Shore Eelex 8000 cruiser that melds Swedish maritime craftsmanship with innovative technology solutions that contribute to a future free of fossil fuels. The X Shore company has built an award-winning reputation for green and innovative practices. After X Shore's processes, revenues and investments were audited by a leading global provider of independent, research-based evaluations on green bonds, CICERO Shades of Green AS, they were named one of the most sustainable manufacturers in the world and received the Dark Green rating, the best possible result.",
+      },
+      {
+        type: "p",
+        text: "All this adds up to a guilt-free summertime cruise on the glorious Great Lakes waters when you choose to board the Sycorax. Sycorax is currently one of only a few electric powerboat cruises available in the US. We're proud to have recently been featured on the Electrified Marina Podcast, Episode 6: Sycorax Electric Cruises, available for streaming on most major platforms. We're also briefly featured on Travels with Darley Season 12, Episode 1: Detroit Rhythms.",
+      },
+      {
+        type: "p",
+        text: "Here at Sycorax Electric Cruises, we hope to host you for a private boating excursion this summer that takes all of the pain out of pleasure boating. Book today!",
+      },
+      {
+        type: "p",
+        text: "Sources: typical yacht fuel consumption (excluding super & mega yachts) runs 20-50 gallons/hour; average U.S. highway auto mileage is 27 mpg; the LA to NYC drive is about 2,800 miles. That works out to roughly 100 gallons of gas to drive cross-country, versus 100 to 250 gallons for a 5-hour yacht cruise.",
+      },
+    ],
   },
   {
     slug: "welcome-aboard",
@@ -367,6 +512,24 @@ export const blogPosts = [
     image: img(3),
     pos: imgPos(3),
     alt: "Guest relaxing on the bow of the Sycorax at sunset",
+    content: [
+      {
+        type: "p",
+        text: "Ahoy, and welcome aboard the Sycorax! We're delighted to launch Southeast Michigan's first electric boat cruises, and we look forward to giving our guests an unforgettable experience aboard the very latest in green boating technology.",
+      },
+      {
+        type: "p",
+        text: "We'd love to get acquainted with you, our future guests. Can we begin by telling you about ourselves? Rather a long time ago, an impressionable young man named Blair went to the movies and saw an adaptation of William Shakespeare's play The Tempest. It starred the effervescent Susan Sarandon and a 14-year-old Molly Ringwald in her debut screen performance. At the heart of this movie is Phillip, a successful businessman who leaves his privileged life behind for adventures on the high seas. Caliban, something between a villain and a fool, features heavily in the movie's mischief; his mother, according to the play, is Sycorax, a fearsome sea witch.",
+      },
+      {
+        type: "p",
+        text: "As young Blair left the movie theater, he made a solemn promise to himself to eschew an ordinary life, to seek watery adventures instead and perform salty acts of derring-do. Years passed and, many high seas adventures under his belt, Blair, now a U.S. Coast Guard-certified captain, became the owner of a gloriously green, positively witchy, 100% electric cruiser, the Sycorax, which we now have the pleasure of sharing with you. His wife Allie, an avid swimmer, snorkeler, diver, boater, and all-around water baby, joins the crew as first mate.",
+      },
+      {
+        type: "p",
+        text: "It all started with a movie. And it culminates today in our luxury custom cruises. Come aboard the Sycorax with us and see just what an adventure boating can be!",
+      },
+    ],
   },
 ] as const;
 
